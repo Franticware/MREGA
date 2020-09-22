@@ -1,0 +1,5 @@
+oplarina.exe: *.cpp *.h
+	g++ -DUSESDL -O2 -Wall -W -fPIC `sdl2-config --cflags` `sdl2-config --libs` -lsamplerate -o mrega main.cpp opl.cpp sdlopl.cpp sdltk.cpp sim.cpp sound.cpp
+
+clean:
+	rm mrega

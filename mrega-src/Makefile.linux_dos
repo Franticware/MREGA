@@ -1,0 +1,9 @@
+oplarina.exe: *.cpp *.h
+	rm -f mrega.exe
+	rm -f *.o
+	WATCOM=/opt/watcom PATH=/opt/watcom/binl64 INCLUDE=/opt/watcom/h /opt/watcom/binl64/wpp386 -bt=dos -ox *.cpp
+	WATCOM=/opt/watcom PATH=/opt/watcom/binl64 /opt/watcom/binl64/wlink name mrega.exe sys dos4g file { *.o }
+	rm -f *.o
+	
+clean:
+	rm *.o mrega.exe *.err

@@ -77,6 +77,11 @@ void getBuildDate(char bd[9])
             bd[7] = date[4];
         }
     }
+
+    if (bd[6] == ' ')
+    {
+        bd[6] = '0';
+    }
 }
 
 #if 0
